@@ -15,10 +15,10 @@ contract MyToken is IERC20 {
     mapping(address => mapping(address => uint256)) private _allowances;
 
     constructor() {
-        _name = "My Token";
-        _symbol = "MT";
+        _name = "Anasset";
+        _symbol = "ANAS";
         _decimals = 18;
-        _totalSupply = 1000000 * (10**uint256(_decimals));
+        _totalSupply = 99999999999999999999 * (10**uint256(_decimals));
         _balances[msg.sender] = _totalSupply;
     }
 
