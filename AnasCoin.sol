@@ -22,6 +22,29 @@ contract MyToken is IERC20 {
         _balances[msg.sender] = _totalSupply;
     }
 
+    contract MyContract {
+    using SafeMath for uint256;
+
+    uint256 public myNumber;
+
+    function safeAdd(uint256 a, uint256 b) public {
+        myNumber = a.add(b);
+    }
+
+    function safeSub(uint256 a, uint256 b) public {
+        myNumber = a.sub(b);
+    }
+
+    function safeMul(uint256 a, uint256 b) public {
+        myNumber = a.mul(b);
+    }
+
+    function safeDiv(uint256 a, uint256 b) public {
+        myNumber = a.div(b);
+    }
+}
+
+
     function name() public view returns (string memory) {
         return _name;
     }
