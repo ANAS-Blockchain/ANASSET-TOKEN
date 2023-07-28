@@ -1,7 +1,7 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "./SafeMath.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
 
 contract MyToken is IERC20 {
     using SafeMath for uint256;
@@ -15,10 +15,10 @@ contract MyToken is IERC20 {
     mapping(address => mapping(address => uint256)) private _allowances;
 
     constructor() {
-        _name = "Anasset";
+        _name = "AnasCoin";
         _symbol = "ANAS";
         _decimals = 18;
-        _totalSupply = 99999999999999999999 * (10**uint256(_decimals));
+        _totalSupply = 10000000000 * (10**uint256(_decimals));
         _balances[msg.sender] = _totalSupply;
     }
 
